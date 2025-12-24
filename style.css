@@ -1,0 +1,155 @@
+/* ===============================
+   RESET
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #91c6bc, #4b9da9, #f6f3c2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===============================
+   CARD
+================================ */
+.card {
+  background: #ffffff;
+  width: 420px;
+  padding: 36px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   TEXT
+================================ */
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 26px;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* ===============================
+   FACEBOOK LOGIN BUTTON
+================================ */
+.fb-btn {
+  width: 100%;
+  background: #1877f2;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.fb-btn:hover {
+  background: #145fd1;
+}
+
+.fb-btn:active {
+  transform: scale(0.98);
+}
+
+.fb-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fb-icon {
+  background: #ffffff;
+  color: #1877f2;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ===============================
+   PROFILE SECTION
+================================ */
+.profile {
+  margin-top: 28px;
+}
+
+.profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.profile h2 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.profile p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===============================
+   LOGOUT BUTTON
+================================ */
+.logout-btn {
+  width: 100%;
+  margin-top: 18px;
+  background: #1877f2;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 10px 22px rgba(24, 119, 242, 0.35);
+}
+
+.logout-btn:hover {
+  background: #145fd1;
+}
+
+.logout-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===============================
+   UTIL
+================================ */
+.hidden {
+  display: none;
+}

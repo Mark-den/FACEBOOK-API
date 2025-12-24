@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Integration</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- TITLE -->
+    <h1 class="title">Local Integration</h1>
+    <p class="subtitle">Facebook Login Authentication</p>
+
+    <!-- LOGIN BUTTON -->
+    <button id="loginBtn" class="fb-btn" disabled>
+      <span class="fb-icon">f</span>
+      Login with Facebook
+    </button>
+
+    <p class="hint">You’ll be redirected to Facebook to continue</p>
+
+    <!-- PROFILE SECTION -->
+    <div id="profile" class="profile hidden">
+      <img id="profilePic" src="" alt="Profile Picture" />
+      <h2 id="name"></h2>
+      <p id="email"></p>
+
+      <button id="logoutBtn" class="logout-btn">
+        Logout
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Facebook SDK (CORRECT WAY) -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1528637581521556',
+        cookie: true,
+        xfbml: false,
+        version: 'v19.0'
+      });
+
+      // Enable button AFTER SDK loads
+      document.getElementById('loginBtn').disabled = false;
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- App JS -->
+  <script src="script.js"></script>
+</body>
+</html>
